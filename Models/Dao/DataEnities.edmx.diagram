@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="215983f4b96040aa8df1406b886d8a2a" Name="Diagram1" ZoomLevel="114">
+        <EntityTypeShape EntityType="DBTableModel.CTDoanKhach" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.CTDoanNV" Width="1.5" PointX="10.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.CTTour" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.DiaDiem" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.Doan" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.KhachHang" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.LoaiHinhDulich" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.LoaiNv" Width="1.5" PointX="6.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.NhanVien" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.QuocGia" Width="1.5" PointX="1.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.TinhThanh" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTableModel.Tour" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="DBTableModel.FK__CTDoanKha__FkDoa__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__CTDoanKha__FkKha__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__CTDoanNV__FkDoan__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__CTDoanNV__FkNhan__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__CTTour__FkDiaDie__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__CTTour__FkTour__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__DiaDiem__FkTinhT__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__Doan__FkTour__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__Tour__FkLoaiHinh__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__NhanVien__FkLoai__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTableModel.FK__TinhThanh__FkQuo__2B3F6F97" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
