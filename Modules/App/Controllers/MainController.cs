@@ -14,7 +14,7 @@ namespace App.Controllers {
         protected MainController()
         {
             mainFrame = new MainFrame();
-            this.SetAction("Tour", "LoaiHinhDuLichListing");
+            this.SetAction("Tour", "LoaiHinhDuLichListing", new [] {""});
         }
 
         public MainFrame GetMainFrame()
@@ -22,15 +22,22 @@ namespace App.Controllers {
             return this.mainFrame;
         }
 
-        public void SetAction(string controller, string action)
+        public void SetAction(string controller, string action, object[] paObjects = null)
         {
-            controller = "App.Controllers." + controller + "Controller";
-            action = action + "Action";
-            Type t = Type.GetType(controller);
-            var instance = t.BaseType.GetProperty("Instance").GetValue(null);
-            MethodInfo actionMethod = t.GetMethod(action);
-            var view = (UserControl)actionMethod.Invoke(instance, null);
-            this.mainFrame.SetMainScreen(view);
+            try {
+                controller = "App.Controllers." + controller + "Controller";
+                action = action + "Action";
+                Type t = Type.GetType(controller);
+                var instance = t.BaseType.GetProperty("Instance").GetValue(null);
+                MethodInfo actionMethod = t.GetMethod(action);
+                var view = (UserControl)actionMethod.Invoke(instance, paObjects);
+                if (view != null) {
+                    this.mainFrame.SetMainScreen(view);
+                }
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
         }
     }
 }

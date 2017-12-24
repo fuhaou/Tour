@@ -31,6 +31,9 @@ namespace Models.Dao
         public Nullable<double> DoanFoodCost { get; set; }
         public Nullable<double> DoanVehicleCost { get; set; }
         public Nullable<double> DoanAdditionalCost { get; set; }
+        public Nullable<double> DoanTourPrice { get; set; }
+        public Nullable<System.DateTime> DoanNgayTao { get; set; }
+        public Nullable<int> DoanTrangThai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTDoanKhach> CTDoanKhaches { get; set; }

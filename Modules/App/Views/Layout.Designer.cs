@@ -39,7 +39,7 @@
             // 
             // pnMenu
             // 
-            this.pnMenu.BackColor = System.Drawing.Color.Fuchsia;
+            this.pnMenu.BackColor = System.Drawing.Color.PaleTurquoise;
             this.pnMenu.Controls.Add(this.btnQLTour);
             this.pnMenu.Location = new System.Drawing.Point(3, 3);
             this.pnMenu.Name = "pnMenu";

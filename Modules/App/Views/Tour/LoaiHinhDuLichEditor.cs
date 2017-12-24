@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.Controllers;
 using Models;
 
 namespace App.Views.Tour {
@@ -14,6 +15,22 @@ namespace App.Views.Tour {
         private int _id;
         public void SetId(int id) {
             this._id = id;
+            if (id == 0) {
+                lblAction.Text = "Thêm Mới";
+            }
+            else {
+                lblAction.Text = "Chỉnh sửa";
+            }
+        }
+
+        public void SetTen(string name)
+        {
+            txtTen.Text = name;
+        }
+
+        public void SetNote(string note)
+        {
+            txtNote.Text = note;
         }
 
         public LoaiHinhDuLichEditor() {
@@ -25,17 +42,11 @@ namespace App.Views.Tour {
         {
             var name = this.txtTen.Text;
             var note = this.txtNote.Text;
-            if (this._id != 0 ) {
-                LoaiHinhDuLichModel.Instance.Update(
-                    this._id,
-                    name,
-                    note
-                );
-            } else {
-                LoaiHinhDuLichModel.Instance.Insert(
-                    name, note
-                );
-            }
+            MainController.Instance.SetAction(
+                "Tour",
+                "LoaiHinhDuLichEditorSave",
+                new Object[] { _id , name , note  }
+            );
         }
     }
 }

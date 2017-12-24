@@ -43,7 +43,7 @@ CREATE TABLE DiaDiem
 (
   DiaDiemId INT IDENTITY ,
   DiaDiemTen NVARCHAR(255) NOT NULL,
-  FkTinhThanh INT NOT NULL
+  FkTinhThanh INT NOT NULL,
   PRIMARY KEY (DiaDiemId),
   FOREIGN KEY (FkTinhThanh) REFERENCES TinhThanh(TinhThanhId)
 );
@@ -54,7 +54,7 @@ CREATE TABLE Tour
   TourCode VARCHAR(50) UNIQUE ,
   TourTen  NVARCHAR(50) NOT NULL ,
   FkLoaiHinhDulich int NOT NULL ,
-  TourPrice FLOAT
+  TourPrice FLOAT,
   PRIMARY KEY (TourId),
   FOREIGN KEY (FkLoaiHinhDulich) REFERENCES LoaiHinhDulich(LoaiHinhDulichId)
 );
@@ -126,3 +126,11 @@ CREATE TABLE CTDoanNV
   FOREIGN KEY (FkNhanVien) REFERENCES NhanVien(NhanVienId)
 );
 
+ALTER table Doan 
+	ADD DoanTourPrice FLOAT;
+ALTER table Doan 
+	ADD DoanNgayTao DateTime;
+ALTER table Doan 
+	ADD DoanTrangThai int; --	0 chua di, 1 da di , 2 dang di,3  huy
+ALTER table DiaDiem
+	ADD DiaDiemKhachSan int; -- 0 ko phai khach san 1 la` khach san 

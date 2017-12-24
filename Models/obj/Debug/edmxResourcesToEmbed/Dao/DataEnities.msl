@@ -37,6 +37,7 @@
     <EntitySetMapping Name="DiaDiems">
       <EntityTypeMapping TypeName="DBTableModel.DiaDiem">
         <MappingFragment StoreEntitySet="DiaDiem">
+          <ScalarProperty Name="DiaDiemKhachSan" ColumnName="DiaDiemKhachSan" />
           <ScalarProperty Name="DiaDiemId" ColumnName="DiaDiemId" />
           <ScalarProperty Name="DiaDiemTen" ColumnName="DiaDiemTen" />
           <ScalarProperty Name="FkTinhThanh" ColumnName="FkTinhThanh" />
@@ -46,6 +47,9 @@
     <EntitySetMapping Name="Doans">
       <EntityTypeMapping TypeName="DBTableModel.Doan">
         <MappingFragment StoreEntitySet="Doan">
+          <ScalarProperty Name="DoanTrangThai" ColumnName="DoanTrangThai" />
+          <ScalarProperty Name="DoanNgayTao" ColumnName="DoanNgayTao" />
+          <ScalarProperty Name="DoanTourPrice" ColumnName="DoanTourPrice" />
           <ScalarProperty Name="DoanId" ColumnName="DoanId" />
           <ScalarProperty Name="DoanCode" ColumnName="DoanCode" />
           <ScalarProperty Name="DoanTen" ColumnName="DoanTen" />

@@ -15,6 +15,21 @@ namespace Models {
             this._db = new DBTableEntities();
         }
 
+        public Dao.LoaiHinhDulich GetById(int id)
+        {
+            var res = new LoaiHinhDulich();
+            try {
+                var data = _db.LoaiHinhDuliches.First(x => x.LoaiHinhDulichId == id);
+                if (data != null) {
+                    res = data;
+                }
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
+            return res;
+        }
+
         public List<Dao.LoaiHinhDulich> SearchList(string name) {
             name = name.Trim();
             List<Dao.LoaiHinhDulich> res = new List<Dao.LoaiHinhDulich>();

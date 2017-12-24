@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using App.Controllers;
 
 namespace App.Views {
     public partial class Layout : UserControl {
@@ -21,8 +22,12 @@ namespace App.Views {
             this.pnMain.Controls.Add(control);
         }
 
-        private void btnQLTour_Click(object sender, EventArgs e) {
-
+        private void btnQLTour_Click(object sender, EventArgs e)
+        {
+            MainController.Instance.SetAction(
+                "Tour",
+                "Index"
+            );
         }
     }
 }

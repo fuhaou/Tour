@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBTableModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBTableModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CTDoanKhach">
           <Key>
             <PropertyRef Name="CTDoanKhachId" />
@@ -42,6 +42,7 @@
           <Property Name="DiaDiemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DiaDiemTen" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="FkTinhThanh" Type="int" Nullable="false" />
+          <Property Name="DiaDiemKhachSan" Type="int" />
         </EntityType>
         <EntityType Name="Doan">
           <Key>
@@ -57,6 +58,9 @@
           <Property Name="DoanFoodCost" Type="float" />
           <Property Name="DoanVehicleCost" Type="float" />
           <Property Name="DoanAdditionalCost" Type="float" />
+          <Property Name="DoanTourPrice" Type="float" />
+          <Property Name="DoanNgayTao" Type="datetime" />
+          <Property Name="DoanTrangThai" Type="int" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -310,8 +314,7 @@
             <End Role="Tour" EntitySet="Tour" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBTableModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -360,6 +363,7 @@
           <Property Name="FkTinhThanh" Type="Int32" Nullable="false" />
           <NavigationProperty Name="CTTours" Relationship="Self.FK__CTTour__FkDiaDie__35BCFE0A" FromRole="DiaDiem" ToRole="CTTour" />
           <NavigationProperty Name="TinhThanh" Relationship="Self.FK__DiaDiem__FkTinhT__2E1BDC42" FromRole="DiaDiem" ToRole="TinhThanh" />
+          <Property Name="DiaDiemKhachSan" Type="Int32" />
         </EntityType>
         <EntityType Name="Doan">
           <Key>
@@ -378,6 +382,9 @@
           <NavigationProperty Name="CTDoanKhaches" Relationship="Self.FK__CTDoanKha__FkDoa__3C69FB99" FromRole="Doan" ToRole="CTDoanKhach" />
           <NavigationProperty Name="CTDoanNVs" Relationship="Self.FK__CTDoanNV__FkDoan__44FF419A" FromRole="Doan" ToRole="CTDoanNV" />
           <NavigationProperty Name="Tour" Relationship="Self.FK__Doan__FkTour__398D8EEE" FromRole="Doan" ToRole="Tour" />
+          <Property Name="DoanTourPrice" Type="Double" />
+          <Property Name="DoanNgayTao" Type="DateTime" Precision="3" />
+          <Property Name="DoanTrangThai" Type="Int32" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
@@ -684,6 +691,7 @@
           <EntitySetMapping Name="DiaDiems">
             <EntityTypeMapping TypeName="DBTableModel.DiaDiem">
               <MappingFragment StoreEntitySet="DiaDiem">
+                <ScalarProperty Name="DiaDiemKhachSan" ColumnName="DiaDiemKhachSan" />
                 <ScalarProperty Name="DiaDiemId" ColumnName="DiaDiemId" />
                 <ScalarProperty Name="DiaDiemTen" ColumnName="DiaDiemTen" />
                 <ScalarProperty Name="FkTinhThanh" ColumnName="FkTinhThanh" />
@@ -693,6 +701,9 @@
           <EntitySetMapping Name="Doans">
             <EntityTypeMapping TypeName="DBTableModel.Doan">
               <MappingFragment StoreEntitySet="Doan">
+                <ScalarProperty Name="DoanTrangThai" ColumnName="DoanTrangThai" />
+                <ScalarProperty Name="DoanNgayTao" ColumnName="DoanNgayTao" />
+                <ScalarProperty Name="DoanTourPrice" ColumnName="DoanTourPrice" />
                 <ScalarProperty Name="DoanId" ColumnName="DoanId" />
                 <ScalarProperty Name="DoanCode" ColumnName="DoanCode" />
                 <ScalarProperty Name="DoanTen" ColumnName="DoanTen" />

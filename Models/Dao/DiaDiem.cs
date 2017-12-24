@@ -23,6 +23,7 @@ namespace Models.Dao
         public int DiaDiemId { get; set; }
         public string DiaDiemTen { get; set; }
         public int FkTinhThanh { get; set; }
+        public Nullable<int> DiaDiemKhachSan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTTour> CTTours { get; set; }

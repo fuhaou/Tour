@@ -37,6 +37,7 @@
     <Property Name="DiaDiemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DiaDiemTen" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="FkTinhThanh" Type="int" Nullable="false" />
+    <Property Name="DiaDiemKhachSan" Type="int" />
   </EntityType>
   <EntityType Name="Doan">
     <Key>
@@ -52,6 +53,9 @@
     <Property Name="DoanFoodCost" Type="float" />
     <Property Name="DoanVehicleCost" Type="float" />
     <Property Name="DoanAdditionalCost" Type="float" />
+    <Property Name="DoanTourPrice" Type="float" />
+    <Property Name="DoanNgayTao" Type="datetime" />
+    <Property Name="DoanTrangThai" Type="int" />
   </EntityType>
   <EntityType Name="KhachHang">
     <Key>

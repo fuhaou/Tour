@@ -23,41 +23,43 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.lblTenTour = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtTenTour = new System.Windows.Forms.TextBox();
+            this.lblTenLoaiHinhDuLich = new System.Windows.Forms.Label();
+            this.dataListView = new System.Windows.Forms.DataGridView();
+            this.txtTenLoaiHinhDuLich = new System.Windows.Forms.TextBox();
             this.btnChinhSua = new System.Windows.Forms.Button();
             this.btnThemMoi = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListView)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblTenTour
+            // lblTenLoaiHinhDuLich
             // 
-            this.lblTenTour.AutoSize = true;
-            this.lblTenTour.Location = new System.Drawing.Point(3, 50);
-            this.lblTenTour.Name = "lblTenTour";
-            this.lblTenTour.Size = new System.Drawing.Size(114, 13);
-            this.lblTenTour.TabIndex = 11;
-            this.lblTenTour.Text = "Tên Loại Hình Du Lịch";
+            this.lblTenLoaiHinhDuLich.AutoSize = true;
+            this.lblTenLoaiHinhDuLich.Location = new System.Drawing.Point(3, 50);
+            this.lblTenLoaiHinhDuLich.Name = "lblTenLoaiHinhDuLich";
+            this.lblTenLoaiHinhDuLich.Size = new System.Drawing.Size(114, 13);
+            this.lblTenLoaiHinhDuLich.TabIndex = 11;
+            this.lblTenLoaiHinhDuLich.Text = "Tên Loại Hình Du Lịch";
             // 
-            // dataGridView1
+            // dataListView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 77);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 520);
-            this.dataGridView1.TabIndex = 10;
+            this.dataListView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListView.Location = new System.Drawing.Point(3, 77);
+            this.dataListView.MultiSelect = false;
+            this.dataListView.Name = "dataListView";
+            this.dataListView.ReadOnly = true;
+            this.dataListView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataListView.Size = new System.Drawing.Size(794, 520);
+            this.dataListView.TabIndex = 10;
             // 
-            // txtTenTour
+            // txtTenLoaiHinhDuLich
             // 
-            this.txtTenTour.Location = new System.Drawing.Point(123, 47);
-            this.txtTenTour.Name = "txtTenTour";
-            this.txtTenTour.Size = new System.Drawing.Size(183, 20);
-            this.txtTenTour.TabIndex = 9;
+            this.txtTenLoaiHinhDuLich.Location = new System.Drawing.Point(123, 47);
+            this.txtTenLoaiHinhDuLich.Name = "txtTenLoaiHinhDuLich";
+            this.txtTenLoaiHinhDuLich.Size = new System.Drawing.Size(183, 20);
+            this.txtTenLoaiHinhDuLich.TabIndex = 9;
             // 
             // btnChinhSua
             // 
@@ -104,15 +106,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblHeader);
-            this.Controls.Add(this.lblTenTour);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtTenTour);
+            this.Controls.Add(this.lblTenLoaiHinhDuLich);
+            this.Controls.Add(this.dataListView);
+            this.Controls.Add(this.txtTenLoaiHinhDuLich);
             this.Controls.Add(this.btnChinhSua);
             this.Controls.Add(this.btnThemMoi);
             this.Controls.Add(this.btnSearch);
             this.Name = "LoaiHinhDuLichListing";
             this.Size = new System.Drawing.Size(800, 600);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,9 +122,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTenTour;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtTenTour;
+        private System.Windows.Forms.Label lblTenLoaiHinhDuLich;
+        private System.Windows.Forms.DataGridView dataListView;
+        private System.Windows.Forms.TextBox txtTenLoaiHinhDuLich;
         private System.Windows.Forms.Button btnChinhSua;
         private System.Windows.Forms.Button btnThemMoi;
         private System.Windows.Forms.Button btnSearch;
