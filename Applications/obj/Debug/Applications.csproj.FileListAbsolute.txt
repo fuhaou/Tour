@@ -1,0 +1,5 @@
+D:\doan\Tour\Applications\bin\Debug\Applications.dll
+D:\doan\Tour\Applications\bin\Debug\Applications.pdb
+D:\doan\Tour\Applications\obj\Debug\Applications.csprojResolveAssemblyReference.cache
+D:\doan\Tour\Applications\obj\Debug\Applications.dll
+D:\doan\Tour\Applications\obj\Debug\Applications.pdb

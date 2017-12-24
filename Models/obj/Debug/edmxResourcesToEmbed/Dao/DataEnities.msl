@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBTableModelStoreContainer" CdmEntityContainer="DBTableEntities">
+    <EntitySetMapping Name="CTDoanKhaches">
+      <EntityTypeMapping TypeName="DBTableModel.CTDoanKhach">
+        <MappingFragment StoreEntitySet="CTDoanKhach">
+          <ScalarProperty Name="CTDoanKhachId" ColumnName="CTDoanKhachId" />
+          <ScalarProperty Name="FkDoan" ColumnName="FkDoan" />
+          <ScalarProperty Name="FkKhachHang" ColumnName="FkKhachHang" />
+          <ScalarProperty Name="CTDoanKhachTenNguoiDi" ColumnName="CTDoanKhachTenNguoiDi" />
+          <ScalarProperty Name="CTDoanKhachSdtNguoiDi" ColumnName="CTDoanKhachSdtNguoiDi" />
+          <ScalarProperty Name="CTDoanKhachDiaChiNguoiDi" ColumnName="CTDoanKhachDiaChiNguoiDi" />
+          <ScalarProperty Name="CTDoanKhachCMNDNguoiDi" ColumnName="CTDoanKhachCMNDNguoiDi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTDoanNVs">
+      <EntityTypeMapping TypeName="DBTableModel.CTDoanNV">
+        <MappingFragment StoreEntitySet="CTDoanNV">
+          <ScalarProperty Name="CTDoanNVId" ColumnName="CTDoanNVId" />
+          <ScalarProperty Name="FkDoan" ColumnName="FkDoan" />
+          <ScalarProperty Name="FkNhanVien" ColumnName="FkNhanVien" />
+          <ScalarProperty Name="CTDoanNVNote" ColumnName="CTDoanNVNote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTTours">
+      <EntityTypeMapping TypeName="DBTableModel.CTTour">
+        <MappingFragment StoreEntitySet="CTTour">
+          <ScalarProperty Name="CTTourId" ColumnName="CTTourId" />
+          <ScalarProperty Name="FkTour" ColumnName="FkTour" />
+          <ScalarProperty Name="FkDiaDiem" ColumnName="FkDiaDiem" />
+          <ScalarProperty Name="CTourGia" ColumnName="CTourGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiaDiems">
+      <EntityTypeMapping TypeName="DBTableModel.DiaDiem">
+        <MappingFragment StoreEntitySet="DiaDiem">
+          <ScalarProperty Name="DiaDiemId" ColumnName="DiaDiemId" />
+          <ScalarProperty Name="DiaDiemTen" ColumnName="DiaDiemTen" />
+          <ScalarProperty Name="FkTinhThanh" ColumnName="FkTinhThanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doans">
+      <EntityTypeMapping TypeName="DBTableModel.Doan">
+        <MappingFragment StoreEntitySet="Doan">
+          <ScalarProperty Name="DoanId" ColumnName="DoanId" />
+          <ScalarProperty Name="DoanCode" ColumnName="DoanCode" />
+          <ScalarProperty Name="DoanTen" ColumnName="DoanTen" />
+          <ScalarProperty Name="DoanNgayDi" ColumnName="DoanNgayDi" />
+          <ScalarProperty Name="DoanNgayVe" ColumnName="DoanNgayVe" />
+          <ScalarProperty Name="FkTour" ColumnName="FkTour" />
+          <ScalarProperty Name="DoanHotelCost" ColumnName="DoanHotelCost" />
+          <ScalarProperty Name="DoanFoodCost" ColumnName="DoanFoodCost" />
+          <ScalarProperty Name="DoanVehicleCost" ColumnName="DoanVehicleCost" />
+          <ScalarProperty Name="DoanAdditionalCost" ColumnName="DoanAdditionalCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhachHangs">
+      <EntityTypeMapping TypeName="DBTableModel.KhachHang">
+        <MappingFragment StoreEntitySet="KhachHang">
+          <ScalarProperty Name="KhachHangId" ColumnName="KhachHangId" />
+          <ScalarProperty Name="KhachHangTen" ColumnName="KhachHangTen" />
+          <ScalarProperty Name="KhachHangSdt" ColumnName="KhachHangSdt" />
+          <ScalarProperty Name="KhachHangDiaChi" ColumnName="KhachHangDiaChi" />
+          <ScalarProperty Name="CMND" ColumnName="CMND" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiHinhDuliches">
+      <EntityTypeMapping TypeName="DBTableModel.LoaiHinhDulich">
+        <MappingFragment StoreEntitySet="LoaiHinhDulich">
+          <ScalarProperty Name="LoaiHinhDulichId" ColumnName="LoaiHinhDulichId" />
+          <ScalarProperty Name="LoaiHinhDulichTen" ColumnName="LoaiHinhDulichTen" />
+          <ScalarProperty Name="LoaiHinhDulichNote" ColumnName="LoaiHinhDulichNote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoaiNvs">
+      <EntityTypeMapping TypeName="DBTableModel.LoaiNv">
+        <MappingFragment StoreEntitySet="LoaiNv">
+          <ScalarProperty Name="LoaiNvId" ColumnName="LoaiNvId" />
+          <ScalarProperty Name="LoaiNvName" ColumnName="LoaiNvName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NhanViens">
+      <EntityTypeMapping TypeName="DBTableModel.NhanVien">
+        <MappingFragment StoreEntitySet="NhanVien">
+          <ScalarProperty Name="NhanVienId" ColumnName="NhanVienId" />
+          <ScalarProperty Name="NhanVienCode" ColumnName="NhanVienCode" />
+          <ScalarProperty Name="NhanVienTen" ColumnName="NhanVienTen" />
+          <ScalarProperty Name="NhanVienDiaChi" ColumnName="NhanVienDiaChi" />
+          <ScalarProperty Name="NhanVienSdt" ColumnName="NhanVienSdt" />
+          <ScalarProperty Name="NhanVienCMND" ColumnName="NhanVienCMND" />
+          <ScalarProperty Name="FkLoaiNv" ColumnName="FkLoaiNv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuocGias">
+      <EntityTypeMapping TypeName="DBTableModel.QuocGia">
+        <MappingFragment StoreEntitySet="QuocGia">
+          <ScalarProperty Name="QuocGiaId" ColumnName="QuocGiaId" />
+          <ScalarProperty Name="QuocGiaTen" ColumnName="QuocGiaTen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinhThanhs">
+      <EntityTypeMapping TypeName="DBTableModel.TinhThanh">
+        <MappingFragment StoreEntitySet="TinhThanh">
+          <ScalarProperty Name="TinhThanhId" ColumnName="TinhThanhId" />
+          <ScalarProperty Name="TinhThanhTen" ColumnName="TinhThanhTen" />
+          <ScalarProperty Name="FkQuocGIa" ColumnName="FkQuocGIa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tours">
+      <EntityTypeMapping TypeName="DBTableModel.Tour">
+        <MappingFragment StoreEntitySet="Tour">
+          <ScalarProperty Name="TourId" ColumnName="TourId" />
+          <ScalarProperty Name="TourCode" ColumnName="TourCode" />
+          <ScalarProperty Name="TourTen" ColumnName="TourTen" />
+          <ScalarProperty Name="FkLoaiHinhDulich" ColumnName="FkLoaiHinhDulich" />
+          <ScalarProperty Name="TourPrice" ColumnName="TourPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
