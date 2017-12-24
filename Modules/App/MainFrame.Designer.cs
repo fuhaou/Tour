@@ -33,9 +33,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 482);
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1028, 611);
             this.Name = "MainFrame";
-            this.Text = "Form1";
+            this.Text = "Hệ thống quản lý tour";
+            this.Load += new System.EventHandler(this.MainFrame_Load);
             this.ResumeLayout(false);
 
         }

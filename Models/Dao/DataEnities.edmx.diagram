@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="215983f4b96040aa8df1406b886d8a2a" Name="Diagram1" ZoomLevel="114">
+      <Diagram DiagramId="215983f4b96040aa8df1406b886d8a2a" Name="Diagram1" ZoomLevel="97">
         <EntityTypeShape EntityType="DBTableModel.CTDoanKhach" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTableModel.CTDoanNV" Width="1.5" PointX="10.5" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="DBTableModel.CTTour" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
