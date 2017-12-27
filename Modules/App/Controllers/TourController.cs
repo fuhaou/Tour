@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using App.Views.Tour;
 using Applications;
 using Models;
+using Models.Dao;
 
 namespace App.Controllers {
     public class TourController : Singleton<TourController> {
@@ -19,9 +20,72 @@ namespace App.Controllers {
 
         public UserControl ListingAction(string code , string name)
         {
-            UserControl view = new Views.Tour.Listing();
-            //TODO: STILL HAS TO DO
+            Listing view = new Views.Tour.Listing();
+            view.SetList<Models.Dao.Tour>(
+                Models.TourModel.Instance.SearchList(code, name)
+            );
             return view;
+        }
+        public UserControl EditorAction(int id) {
+            Views.Tour.Editor view = new Views.Tour.Editor();
+            var code = "";
+            view.SetLoaiHinhDuLichDataList<LoaiHinhDulich>(
+                Models.LoaiHinhDuLichModel.Instance.SearchList("")
+            );
+            if (id != 0) {
+                Tour data = Models.TourModel.Instance.GetById(id);
+                code = data.TourCode;
+                view.SetCtListView(
+                    Models.CTTourModel.Instance.SearchByTourId(id)
+                );
+                view.SetName(data.TourTen);
+                view.SetPrice((float)data.TourPrice.GetValueOrDefault(0));
+                view.SetLoaiHinhDuLich(data.FkLoaiHinhDulich);
+                view.SetDiaDiemList(
+                    Models.DiaDiemModel.Instance.SearchList("", -1, "", "")
+                );
+            }
+            view.SetId(id, code);
+            return view;
+        }
+
+        public UserControl EditorSaveAction(int id,string name, float price, int loaihinhdulich)
+        {
+            var _id = 0;
+            if (id != 0) {
+                 _id = id;
+                var msg = TourModel.Instance.Update(
+                    id,
+                    name,
+                    loaihinhdulich,
+                    price
+                );
+                if (msg.Length > 0) {
+                    Console.WriteLine(msg);
+                    MessageBox.Show("Lỗi", "Hệ Thống quá tải xin Vui lòng thử lại!");
+                    return null;
+                }
+            } else {
+                _id = TourModel.Instance.InsertAndGetId(
+                    name,
+                    loaihinhdulich,
+                    price
+                );
+                if (_id == 0) {
+                    MessageBox.Show("Lỗi", "Hệ Thống quá tải xin Vui lòng thử lại!");
+                    return null;
+                }
+            }
+            return this.EditorAction(_id);
+        }
+
+        public UserControl EditorCtSaveAction(int tourId, List<int> diadiemIds)
+        {
+            Models.CTTourModel.Instance.DeleteByTourId(tourId);
+            foreach (var item in diadiemIds) {
+                Models.CTTourModel.Instance.Insert(tourId, item);
+            }
+            return this.EditorAction(tourId);
         }
 
         public UserControl LoaiHinhDuLichListingAction(string name) {

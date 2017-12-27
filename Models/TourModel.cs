@@ -20,6 +20,24 @@ namespace Models
             this._db = new DBTableEntities();
         }
 
+        public Dao.Tour GetByCode(string code) {
+            return this._db.Tours.First(x => x.TourCode == code);
+        }
+
+        public Dao.Tour GetById(int id) {
+            var res = new Tour();
+            try {
+                var data = _db.Tours.Find(id);
+                if (data != null) {
+                    res = data;
+                }
+            } catch (Exception e) {
+                Console.WriteLine(e);
+            }
+            return res;
+        }
+
+
         public List<Dao.Tour> SearchList(string code, string name)
         {
             code = code.Trim();
@@ -43,11 +61,11 @@ namespace Models
 
         private string GenerateCode()
         {
-            return "T" + DateTime.Now.ToString("yyyymmddHHMMSS");
+            return "T" + DateTime.Now.ToString("yyyyMMddHHmmss") + DateTime.Now.Millisecond;
         }
 
-        public string Insert(string name, int? loaihinhdulich, float? gia) {
-            string message = "";
+        public int InsertAndGetId(string name, int? loaihinhdulich, float? gia) {
+            int _id = 0;
             try {
                 var _name = name.Trim();
                 var _loaihinhdulich = loaihinhdulich.GetValueOrDefault(0);
@@ -60,23 +78,20 @@ namespace Models
                 newItem.TourPrice = _gia;
                 _db.Tours.Add(newItem);
                 _db.SaveChanges();
+                _id = _db.Tours.First(x => x.TourCode == _code).TourId;
             } catch (Exception e) {
                 Console.WriteLine(e);
-                message = e.Message;
             }
-            return message;
+            return _id;
         }
 
-
-
-        public string Update(string code, string name, int? loaihinhdulich, float? gia) {
+        public string Update(int id, string name, int? loaihinhdulich, float? gia) {
             string message = "";
             try {
                 var _name = name.Trim();
                 var _loaihinhdulich = loaihinhdulich.GetValueOrDefault(0);
                 var _gia = gia.GetValueOrDefault(0);
-                var _code = code.Trim().ToUpper();
-                var updateData = _db.Tours.First(x => x.TourCode == _code);
+                var updateData = _db.Tours.First(x => x.TourId == id);
                 updateData.TourTen = _name;
                 updateData.FkLoaiHinhDulich = _loaihinhdulich;
                 updateData.TourPrice = _gia;

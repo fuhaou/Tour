@@ -25,7 +25,9 @@
         private void InitializeComponent() {
             this.pnMain = new System.Windows.Forms.Panel();
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.btnDiaDiem = new System.Windows.Forms.Button();
             this.btnQLTour = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
             this.pnMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,11 +42,24 @@
             // pnMenu
             // 
             this.pnMenu.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pnMenu.Controls.Add(this.btnThongKe);
+            this.pnMenu.Controls.Add(this.btnDiaDiem);
             this.pnMenu.Controls.Add(this.btnQLTour);
             this.pnMenu.Location = new System.Drawing.Point(3, 3);
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(212, 600);
             this.pnMenu.TabIndex = 1;
+            // 
+            // btnDiaDiem
+            // 
+            this.btnDiaDiem.Font = new System.Drawing.Font("Calibri Light", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDiaDiem.Location = new System.Drawing.Point(3, 109);
+            this.btnDiaDiem.Name = "btnDiaDiem";
+            this.btnDiaDiem.Size = new System.Drawing.Size(206, 100);
+            this.btnDiaDiem.TabIndex = 0;
+            this.btnDiaDiem.Text = "Quản Lý Địa Điểm";
+            this.btnDiaDiem.UseVisualStyleBackColor = true;
+            this.btnDiaDiem.Click += new System.EventHandler(this.btnDiaDiem_Click);
             // 
             // btnQLTour
             // 
@@ -56,6 +71,17 @@
             this.btnQLTour.Text = "Quản Lý Tour";
             this.btnQLTour.UseVisualStyleBackColor = true;
             this.btnQLTour.Click += new System.EventHandler(this.btnQLTour_Click);
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Font = new System.Drawing.Font("Calibri Light", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Location = new System.Drawing.Point(3, 215);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(206, 100);
+            this.btnThongKe.TabIndex = 0;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // Layout
             // 
@@ -76,5 +102,7 @@
         private System.Windows.Forms.Panel pnMain;
         private System.Windows.Forms.Panel pnMenu;
         private System.Windows.Forms.Button btnQLTour;
+        private System.Windows.Forms.Button btnDiaDiem;
+        private System.Windows.Forms.Button btnThongKe;
     }
 }

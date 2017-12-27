@@ -30,7 +30,7 @@
             // btnTour
             // 
             this.btnTour.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTour.Location = new System.Drawing.Point(97, 189);
+            this.btnTour.Location = new System.Drawing.Point(70, 70);
             this.btnTour.Name = "btnTour";
             this.btnTour.Size = new System.Drawing.Size(300, 200);
             this.btnTour.TabIndex = 0;
@@ -41,7 +41,7 @@
             // btnLoaiHinhDuLich
             // 
             this.btnLoaiHinhDuLich.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoaiHinhDuLich.Location = new System.Drawing.Point(403, 189);
+            this.btnLoaiHinhDuLich.Location = new System.Drawing.Point(430, 70);
             this.btnLoaiHinhDuLich.Name = "btnLoaiHinhDuLich";
             this.btnLoaiHinhDuLich.Size = new System.Drawing.Size(300, 200);
             this.btnLoaiHinhDuLich.TabIndex = 0;

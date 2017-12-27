@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Models.Dao.NhanVien>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form method="get" action="/NhanVien/Index">
+    <fieldset>
+        <input type="text" name="searchdata" value="" />
+        <input type="submit" name="search" value="Tìm Kiếm">
+        <a href="/NhanVien/Create"><input type="button" name="them" value="Thêm Mới"></a>
+    </fieldset>
+</form><br/>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanVienCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanVienTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanVienDiaChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanVienSdt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanVienCMND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiNv.LoaiNvName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVienCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVienTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVienDiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVienSdt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVienCMND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiNv.LoaiNvName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NhanVienId })
+        </td>
+    </tr>
+}
+
+</table>

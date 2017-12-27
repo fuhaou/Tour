@@ -29,5 +29,19 @@ namespace App.Views {
                 "Index"
             );
         }
+
+        private void btnDiaDiem_Click(object sender, EventArgs e) {
+            MainController.Instance.SetAction(
+                "DiaDiem",
+                "Index"
+            );
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e) {
+            MainController.Instance.SetAction(
+                "ThongKe",
+                "Index"
+            );
+        }
     }
 }

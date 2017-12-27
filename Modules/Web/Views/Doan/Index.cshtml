@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Models.Dao.Doan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<a href="/Doan/Create">
+    <input type="button" value="Thêm Mới"/>
+</a>
+<br /><br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanNgayDi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanNgayVe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanHotelCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanFoodCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanVehicleCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanAdditionalCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanTourPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanNgayTao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoanTrangThai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tour.TourCode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanNgayDi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanNgayVe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanHotelCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanFoodCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanVehicleCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanAdditionalCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanTourPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanNgayTao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoanTrangThai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tour.TourCode)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh Sửa", "Edit", new { id=item.DoanId }) 
+        </td>
+    </tr>
+}
+</table>

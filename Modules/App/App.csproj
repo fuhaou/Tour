@@ -60,8 +60,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\DiaDiemController.cs" />
     <Compile Include="Controllers\IndexControler.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\ThongKeController.cs" />
     <Compile Include="Controllers\TourController.cs" />
     <Compile Include="MainFrame.cs">
       <SubType>Form</SubType>
@@ -71,6 +73,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\DiaDiem\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiaDiem\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaDiem\Index.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiaDiem\Index.Designer.cs">
+      <DependentUpon>Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaDiem\Listing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiaDiem\Listing.Designer.cs">
+      <DependentUpon>Listing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaDiem\QuocGiaEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiaDiem\QuocGiaEditor.Designer.cs">
+      <DependentUpon>QuocGiaEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaDiem\QuocGiaListing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiaDiem\QuocGiaListing.Designer.cs">
+      <DependentUpon>QuocGiaListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaDiem\TinhThanhEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiaDiem\TinhThanhEditor.Designer.cs">
+      <DependentUpon>TinhThanhEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiaDiem\TinhThanhListing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DiaDiem\TinhThanhListing.Designer.cs">
+      <DependentUpon>TinhThanhListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Index\Index.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +126,24 @@
     </Compile>
     <Compile Include="Views\Layout.Designer.cs">
       <DependentUpon>Layout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\Index.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\Index.Designer.cs">
+      <DependentUpon>Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ThongKe\SaleReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ThongKe\SaleReport.Designer.cs">
+      <DependentUpon>SaleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tour\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Tour\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Tour\Index.cs">
       <SubType>UserControl</SubType>
@@ -119,11 +181,41 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\DiaDiem\Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiaDiem\Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiaDiem\Listing.resx">
+      <DependentUpon>Listing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiaDiem\QuocGiaEditor.resx">
+      <DependentUpon>QuocGiaEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiaDiem\QuocGiaListing.resx">
+      <DependentUpon>QuocGiaListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiaDiem\TinhThanhEditor.resx">
+      <DependentUpon>TinhThanhEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DiaDiem\TinhThanhListing.resx">
+      <DependentUpon>TinhThanhListing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Index\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Layout.resx">
       <DependentUpon>Layout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ThongKe\SaleReport.resx">
+      <DependentUpon>SaleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Tour\Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Tour\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>

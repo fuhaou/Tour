@@ -1,0 +1,156 @@
+﻿namespace App.Views.DiaDiem {
+    partial class TinhThanhListing {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent() {
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.lblTenLoaiHinhDuLich = new System.Windows.Forms.Label();
+            this.dataListView = new System.Windows.Forms.DataGridView();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.btnChinhSua = new System.Windows.Forms.Button();
+            this.btnThemMoi = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtTenQuocGia = new System.Windows.Forms.TextBox();
+            this.lblQuocGia = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListView)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(3, 9);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(88, 20);
+            this.lblHeader.TabIndex = 26;
+            this.lblHeader.Text = "Tỉnh Thành";
+            // 
+            // lblTenLoaiHinhDuLich
+            // 
+            this.lblTenLoaiHinhDuLich.AutoSize = true;
+            this.lblTenLoaiHinhDuLich.Location = new System.Drawing.Point(3, 45);
+            this.lblTenLoaiHinhDuLich.Name = "lblTenLoaiHinhDuLich";
+            this.lblTenLoaiHinhDuLich.Size = new System.Drawing.Size(87, 13);
+            this.lblTenLoaiHinhDuLich.TabIndex = 25;
+            this.lblTenLoaiHinhDuLich.Text = "Tên Tỉnh Thành:";
+            // 
+            // dataListView
+            // 
+            this.dataListView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListView.Location = new System.Drawing.Point(3, 72);
+            this.dataListView.MultiSelect = false;
+            this.dataListView.Name = "dataListView";
+            this.dataListView.ReadOnly = true;
+            this.dataListView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataListView.Size = new System.Drawing.Size(794, 525);
+            this.dataListView.TabIndex = 24;
+            // 
+            // txtTen
+            // 
+            this.txtTen.Location = new System.Drawing.Point(96, 42);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(183, 20);
+            this.txtTen.TabIndex = 23;
+            // 
+            // btnChinhSua
+            // 
+            this.btnChinhSua.Location = new System.Drawing.Point(722, 40);
+            this.btnChinhSua.Name = "btnChinhSua";
+            this.btnChinhSua.Size = new System.Drawing.Size(75, 23);
+            this.btnChinhSua.TabIndex = 20;
+            this.btnChinhSua.Text = "Chỉnh Sừa";
+            this.btnChinhSua.UseVisualStyleBackColor = true;
+            this.btnChinhSua.Click += new System.EventHandler(this.btnChinhSua_Click);
+            // 
+            // btnThemMoi
+            // 
+            this.btnThemMoi.Location = new System.Drawing.Point(641, 40);
+            this.btnThemMoi.Name = "btnThemMoi";
+            this.btnThemMoi.Size = new System.Drawing.Size(75, 23);
+            this.btnThemMoi.TabIndex = 21;
+            this.btnThemMoi.Text = "Thêm Mới";
+            this.btnThemMoi.UseVisualStyleBackColor = true;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(560, 40);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtTenQuocGia
+            // 
+            this.txtTenQuocGia.Location = new System.Drawing.Point(367, 42);
+            this.txtTenQuocGia.Name = "txtTenQuocGia";
+            this.txtTenQuocGia.Size = new System.Drawing.Size(183, 20);
+            this.txtTenQuocGia.TabIndex = 23;
+            // 
+            // lblQuocGia
+            // 
+            this.lblQuocGia.AutoSize = true;
+            this.lblQuocGia.Location = new System.Drawing.Point(284, 45);
+            this.lblQuocGia.Name = "lblQuocGia";
+            this.lblQuocGia.Size = new System.Drawing.Size(77, 13);
+            this.lblQuocGia.TabIndex = 25;
+            this.lblQuocGia.Text = "Tên Quốc Gia:";
+            // 
+            // TinhThanhListing
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.lblHeader);
+            this.Controls.Add(this.lblQuocGia);
+            this.Controls.Add(this.lblTenLoaiHinhDuLich);
+            this.Controls.Add(this.dataListView);
+            this.Controls.Add(this.txtTenQuocGia);
+            this.Controls.Add(this.txtTen);
+            this.Controls.Add(this.btnChinhSua);
+            this.Controls.Add(this.btnThemMoi);
+            this.Controls.Add(this.btnSearch);
+            this.Name = "TinhThanhListing";
+            this.Size = new System.Drawing.Size(800, 600);
+            ((System.ComponentModel.ISupportInitialize)(this.dataListView)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.Label lblTenLoaiHinhDuLich;
+        private System.Windows.Forms.DataGridView dataListView;
+        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.Button btnThemMoi;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtTenQuocGia;
+        private System.Windows.Forms.Label lblQuocGia;
+    }
+}

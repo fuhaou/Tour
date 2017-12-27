@@ -30,13 +30,13 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.txtTenTour = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataListView = new System.Windows.Forms.DataGridView();
             this.lblCode = new System.Windows.Forms.Label();
             this.lblTenTour = new System.Windows.Forms.Label();
             this.btnThemMoi = new System.Windows.Forms.Button();
             this.btnChinhSua = new System.Windows.Forms.Button();
             this.lblHeader = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListView)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -63,15 +63,16 @@
             this.txtTenTour.Size = new System.Drawing.Size(125, 20);
             this.txtTenTour.TabIndex = 2;
             // 
-            // dataGridView1
+            // dataListView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 76);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 520);
-            this.dataGridView1.TabIndex = 3;
+            this.dataListView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataListView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListView.Location = new System.Drawing.Point(3, 76);
+            this.dataListView.MultiSelect = false;
+            this.dataListView.Name = "dataListView";
+            this.dataListView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataListView.Size = new System.Drawing.Size(794, 520);
+            this.dataListView.TabIndex = 3;
             // 
             // lblCode
             // 
@@ -128,7 +129,7 @@
             this.Controls.Add(this.lblTenTour);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.lblCode);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataListView);
             this.Controls.Add(this.txtTenTour);
             this.Controls.Add(this.txtCode);
             this.Controls.Add(this.btnChinhSua);
@@ -136,7 +137,7 @@
             this.Controls.Add(this.btnSearch);
             this.Name = "Listing";
             this.Size = new System.Drawing.Size(800, 600);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,7 +148,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtCode;
         private System.Windows.Forms.TextBox txtTenTour;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataListView;
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.Label lblTenTour;
         private System.Windows.Forms.Button btnThemMoi;

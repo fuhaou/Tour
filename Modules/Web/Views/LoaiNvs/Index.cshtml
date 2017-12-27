@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Models.Dao.LoaiNv>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<a href="/LoaiNvs/Create"><input type="button" name="them" value="Thêm Mới"></a>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiNvName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiNvName)
+        </td>
+        <td>
+            @Html.ActionLink("Chỉnh Sửa", "Edit", new { id=item.LoaiNvId })
+        </td>
+    </tr>
+}
+
+</table>

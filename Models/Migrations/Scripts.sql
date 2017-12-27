@@ -71,6 +71,8 @@ CREATE TABLE CTTour
 );
 
 
+
+
 CREATE TABLE Doan
 (
   DoanId INT IDENTITY ,
@@ -134,3 +136,7 @@ ALTER table Doan
 	ADD DoanTrangThai int; --	0 chua di, 1 da di , 2 dang di,3  huy
 ALTER table DiaDiem
 	ADD DiaDiemKhachSan int; -- 0 ko phai khach san 1 la` khach san 
+ALTER table CTTour
+	DROP COLUMN CTTourGia; 
+ALTER table KhachHang
+	ADD KhachHangCode varchar(50) unique;

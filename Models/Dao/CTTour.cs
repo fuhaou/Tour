@@ -17,7 +17,6 @@ namespace Models.Dao
         public int CTTourId { get; set; }
         public int FkTour { get; set; }
         public int FkDiaDiem { get; set; }
-        public Nullable<double> CTourGia { get; set; }
     
         public virtual DiaDiem DiaDiem { get; set; }
         public virtual Tour Tour { get; set; }

@@ -22,22 +22,28 @@ namespace App.Controllers {
             return this.mainFrame;
         }
 
-        public void SetAction(string controller, string action, object[] paObjects = null)
+        public string SetAction(string controller, string action, object[] paObjects = null)
         {
+            var dataMessage = "";
             try {
                 controller = "App.Controllers." + controller + "Controller";
                 action = action + "Action";
                 Type t = Type.GetType(controller);
                 var instance = t.BaseType.GetProperty("Instance").GetValue(null);
                 MethodInfo actionMethod = t.GetMethod(action);
-                var view = (UserControl)actionMethod.Invoke(instance, paObjects);
+                var view = actionMethod.Invoke(instance, paObjects);
                 if (view != null) {
-                    this.mainFrame.SetMainScreen(view);
+                    if (view is string) {
+                        dataMessage = view.ToString();
+                    } else {
+                        this.mainFrame.SetMainScreen((UserControl)view);
+                    }
                 }
             }
             catch (Exception e) {
                 Console.WriteLine(e);
             }
+            return dataMessage;
         }
     }
 }

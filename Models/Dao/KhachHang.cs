@@ -25,6 +25,7 @@ namespace Models.Dao
         public string KhachHangSdt { get; set; }
         public string KhachHangDiaChi { get; set; }
         public string CMND { get; set; }
+        public string KhachHangCode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTDoanKhach> CTDoanKhaches { get; set; }
